@@ -1,4 +1,4 @@
-package com.example.spring_test.api.controller;
+package com.example.spring_test.api.controller.product;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.spring_test.api.service.ProductService;
-import com.example.spring_test.api.service.response.ProductResponse;
+import com.example.spring_test.api.controller.product.service.ProductService;
+import com.example.spring_test.api.controller.product.service.response.ProductResponse;
 
 import lombok.RequiredArgsConstructor;
 

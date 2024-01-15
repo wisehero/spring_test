@@ -1,11 +1,11 @@
-package com.example.spring_test.api.service;
+package com.example.spring_test.api.controller.product.service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
-import com.example.spring_test.api.service.response.ProductResponse;
+import com.example.spring_test.api.controller.product.service.response.ProductResponse;
 import com.example.spring_test.domain.product.Product;
 import com.example.spring_test.domain.product.ProductRepository;
 import com.example.spring_test.domain.product.ProductSellingStatus;
