@@ -7,6 +7,9 @@ import java.util.List;
 import com.example.unit.beverage.Beverage;
 import com.example.unit.order.Order;
 
+import lombok.Getter;
+
+@Getter
 public class CafeKiosk {
 
 	private final List<Beverage> beverages = new ArrayList<>();
