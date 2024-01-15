@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.spring_test.api.controller.product.service.ProductService;
-import com.example.spring_test.api.controller.product.service.response.ProductResponse;
+import com.example.spring_test.api.service.product.ProductService;
+import com.example.spring_test.api.service.product.response.ProductResponse;
 
 import lombok.RequiredArgsConstructor;
 
