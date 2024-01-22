@@ -6,10 +6,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.spring_test.api.ApiResponse;
 import com.example.spring_test.api.controller.order.request.OrderCreateRequest;
 import com.example.spring_test.api.service.order.OrderService;
 import com.example.spring_test.api.service.order.response.OrderResponse;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -19,8 +21,9 @@ public class OrderController {
 	private final OrderService orderService;
 
 	@PostMapping("/api/v1/orders/new")
-	public OrderResponse createOrder(@RequestBody OrderCreateRequest request) {
+	public ApiResponse<OrderResponse> createOrder(@Valid @RequestBody OrderCreateRequest request) {
 		LocalDateTime registeredDateTime = LocalDateTime.now();
-		return orderService.createOrder(request, registeredDateTime);
+		return ApiResponse.ok(orderService.createOrder(request.toServiceRequest(), registeredDateTime));
 	}
+	
 }

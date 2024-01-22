@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
-import com.example.spring_test.api.controller.order.request.OrderCreateRequest;
+import com.example.spring_test.api.service.order.request.OrderCreateServiceRequest;
 import com.example.spring_test.api.service.order.response.OrderResponse;
 import com.example.spring_test.domain.order.Order;
 import com.example.spring_test.domain.order.OrderRepository;
@@ -42,7 +42,7 @@ public class OrderService {
 				.collect(Collectors.groupingBy(p -> p, Collectors.counting()));
 	}
 
-	public OrderResponse createOrder(OrderCreateRequest request, LocalDateTime registeredDateTime) {
+	public OrderResponse createOrder(OrderCreateServiceRequest request, LocalDateTime registeredDateTime) {
 		List<String> productNumbers = request.getProductNumbers();
 		List<Product> products = findProductBy(productNumbers);
 
