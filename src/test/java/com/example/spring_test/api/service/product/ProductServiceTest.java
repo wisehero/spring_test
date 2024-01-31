@@ -7,6 +7,7 @@ import static org.assertj.core.api.Assertions.*;
 import java.util.List;
 
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,19 @@ class ProductServiceTest {
 
 	@Autowired
 	private ProductRepository productRepository;
+
+	@BeforeEach
+	void setUp() {
+
+		// before Method
+
+		/**
+		 * BeforeEach를 사용하는 기준
+		 *
+		 * 1. 각 테스트 입장에서 봤을 때 아예 몰라도 테스트 내용을 이해하는 데에 문제가 없는가?
+		 * 2. 수정해도 모든 테스트에 영향을 주지 않는가?
+		 */
+	}
 
 	@AfterEach
 	void tearDown() {
