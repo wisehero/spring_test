@@ -11,9 +11,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
 
+import com.example.spring_test.IntegrationTestSupport;
 import com.example.spring_test.api.controller.product.request.ProductCreateRequest;
 import com.example.spring_test.api.service.product.response.ProductResponse;
 import com.example.spring_test.domain.product.Product;
@@ -21,9 +20,7 @@ import com.example.spring_test.domain.product.ProductRepository;
 import com.example.spring_test.domain.product.ProductSellingStatus;
 import com.example.spring_test.domain.product.ProductType;
 
-@ActiveProfiles("test")
-@SpringBootTest
-class ProductServiceTest {
+class ProductServiceTest extends IntegrationTestSupport {
 
 	@Autowired
 	private ProductService productService;
